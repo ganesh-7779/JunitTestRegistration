@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmailParameterisedTest" tests="9" skipped="0" failures="1" errors="0" timestamp="2021-07-30T05:33:23" hostname="LAPTOP-EJ5FUF38" time="0.012">
+<testsuite name="com.bridgelabz.EmailParameterisedTest" tests="9" skipped="0" failures="1" errors="0" timestamp="2021-07-30T06:01:28" hostname="LAPTOP-EJ5FUF38" time="0.014">
   <properties/>
-  <testcase name="givenEmail_ShouldReturn_TrueAndFalse[0]" classname="com.bridgelabz.EmailParameterisedTest" time="0.004"/>
-  <testcase name="givenEmail_ShouldReturn_TrueAndFalse[1]" classname="com.bridgelabz.EmailParameterisedTest" time="0.001"/>
+  <testcase name="givenEmail_ShouldReturn_TrueAndFalse[0]" classname="com.bridgelabz.EmailParameterisedTest" time="0.005"/>
+  <testcase name="givenEmail_ShouldReturn_TrueAndFalse[1]" classname="com.bridgelabz.EmailParameterisedTest" time="0.0"/>
   <testcase name="givenEmail_ShouldReturn_TrueAndFalse[2]" classname="com.bridgelabz.EmailParameterisedTest" time="0.0"/>
   <testcase name="givenEmail_ShouldReturn_TrueAndFalse[3]" classname="com.bridgelabz.EmailParameterisedTest" time="0.0"/>
   <testcase name="givenEmail_ShouldReturn_TrueAndFalse[4]" classname="com.bridgelabz.EmailParameterisedTest" time="0.001"/>
   <testcase name="givenEmail_ShouldReturn_TrueAndFalse[5]" classname="com.bridgelabz.EmailParameterisedTest" time="0.0"/>
   <testcase name="givenEmail_ShouldReturn_TrueAndFalse[6]" classname="com.bridgelabz.EmailParameterisedTest" time="0.0"/>
-  <testcase name="givenEmail_ShouldReturn_TrueAndFalse[7]" classname="com.bridgelabz.EmailParameterisedTest" time="0.001"/>
+  <testcase name="givenEmail_ShouldReturn_TrueAndFalse[7]" classname="com.bridgelabz.EmailParameterisedTest" time="0.0"/>
   <testcase name="givenEmail_ShouldReturn_TrueAndFalse[8]" classname="com.bridgelabz.EmailParameterisedTest" time="0.005">
     <failure message="java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:120)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.bridgelabz.EmailParameterisedTest.givenEmail_ShouldReturn_TrueAndFalse(EmailParameterisedTest.java:29)
+	at com.bridgelabz.EmailParameterisedTest.givenEmail_ShouldReturn_TrueAndFalse(EmailParameterisedTest.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
