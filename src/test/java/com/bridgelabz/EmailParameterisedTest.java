@@ -28,10 +28,9 @@ public class EmailParameterisedTest {
                 {"abc@gmail.com","true"},{"abc+100@gmail.com","true"}});
     }
     @Test
-    public void givenEmail_ShouldReturn_TrueAndFalse(){
+    public void givenEmail_ShouldReturn_TrueAndFalse() throws ValidationExceptions {
         Registration registration= new Registration();
         boolean result = registration.getEmail(email);
         Assert.assertEquals(true, result);
-
     }
 }
