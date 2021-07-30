@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.RegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-28T18:33:35" hostname="LAPTOP-EJ5FUF38" time="0.002">
-  <properties/>
-  <testcase name="givenLastName_WhenProper_ShouldReturnTrue" classname="com.bridgelabz.RegistrationTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
