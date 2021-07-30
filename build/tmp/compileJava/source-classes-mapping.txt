@@ -1,3 +1,5 @@
+com/bridgelabz/ValidationExceptions.java
+ com.bridgelabz.ValidationExceptions
 com/bridgelabz/UserDetails.java
  com.bridgelabz.UserDetails
 com/bridgelabz/Registration.java

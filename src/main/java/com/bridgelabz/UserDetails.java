@@ -7,7 +7,6 @@ public class UserDetails {
     public String mobile;
     public String password;
 
-
     public String toString() {
         return "User [firstName="+firstName+",lastName="+lastName+",email="+email+",mobile="
                 +mobile+",password"+password+"]";

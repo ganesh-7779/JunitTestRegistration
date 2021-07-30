@@ -1,7 +1,8 @@
 package com.bridgelabz;
 
 /************************************************************
- * Purpose : Create a user registration system using regex.
+ * Purpose : Create a user registration system using regex.And Custom
+ * Exception handling with test case
  * @author Ganesh Gavhad
  * @Version 1.0
  * @since 28-07-2021
@@ -15,41 +16,44 @@ public class Registration {
      * @param firstName
      * @return True if matches regex pattern orterwise false
      */
-    public  boolean getFirstName(String firstName) {
+    public  boolean getFirstName(String firstName) throws ValidationExceptions {
         boolean check;
         check = Pattern.matches("[A-Z]+[a-z]{2,}", firstName);
-        if(!check) {
-            displayErrorMessage("Invalid first name");
+        if (check) {
+            return true;
+        } else {
+            throw new ValidationExceptions("Invalid First Name");
         }
-        return check;
     }
-
     /**
      * Contains regex pattern to test Last name
      * @param lastName
      * @return True if matches regex pattern orterwise false
      */
-    public boolean getLastName(String lastName) {
+    public boolean getLastName(String lastName) throws ValidationExceptions {
         boolean check;
         check= Pattern.matches("[A-Z]+[a-z]{2,}", lastName);
-        if(!check) {
-            displayErrorMessage("Invalid last name");
+        if(check) {
+            return true;
         }
-        return check;
+        else{
+            throw new ValidationExceptions("Invalid Last Name");
+        }
     }
 
     /**
      * Contains regex pattern to test phone number
      * @param phone
-     * @return True if matches regex pattern orterwise false
+     * @return True if matches regex pattern otherwise return invalid
      */
-    public boolean getPhoneNumber(String phone) {
+    public boolean getPhoneNumber(String phone) throws ValidationExceptions {
         boolean check;
-        check = Pattern.matches("^[1-9][0-9]s[1-9]{10}$",phone);
-        if(!check) {
-            displayErrorMessage("Invalid phone number");
+        check = Pattern.matches("^(\\d{2}[ ]){1}\\d{10}$",phone);
+        if(check) {
+            return true;
+        }else {
+            throw new ValidationExceptions("Invalid phone number");
         }
-        return check;
     }
 
     /**
@@ -57,14 +61,14 @@ public class Registration {
      * @param email
      * @return True if matches regex pattern otherwise false
      */
-    public boolean getEmail(String email) {
+    public boolean getEmail(String email) throws ValidationExceptions {
         boolean check;
         check = Pattern.matches("^[a-z0-9.+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,6}$", email);
-        if(!check) {
-            displayErrorMessage("Invalid email");
+        if(check) {
+            return true;
+        }else {
+            throw new ValidationExceptions("Invalid email");
         }
-        return check;
-
     }
 
     /**
@@ -72,28 +76,13 @@ public class Registration {
      * @param password
      * @return True if matches regex pattern orterwise false
      */
-    public boolean getPassword(String password) {
+    public boolean getPassword(String password) throws ValidationExceptions {
         boolean check;
         check = Pattern.matches("^(?=.*[A-Z])(?=.*\\d)(?=.*[a-zA-z0-9!@#$%^&*()_+=-{};':<>,./?~`]).{8,}$", password);
-        if(!check) {
-            displayErrorMessage("Invalid password");
+        if(check) {
+            return true;
+        }else{
+            throw new ValidationExceptions("Invalid password");
         }
-        return check;
-
     }
-
-    /**
-     * Displays error message using lembda expression
-     * @param message (Error message from the method from which it is called)
-     */
-    public static void displayErrorMessage(String message) {
-        System.out.println(message);
-       // i.displayError();
-    }
-    public static void main(String[] args) {
-        Registration r = new Registration();
-        r.getFirstName("ganesh"); //Shows invalid First name message
-        r.getFirstName("Gavhad"); //Does not show error message
-    }
-
 }
