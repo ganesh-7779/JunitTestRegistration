@@ -17,10 +17,11 @@ public class RegistrationTest {
     @Test
     public void givenFirstName_WhenProper_ShouldReturnTrue() throws ValidationExceptions {
         try {
-            boolean result = registration.getFirstName("Ganesh");
+            boolean result;
+            result = registration.getFirstName("Ganesh");
             Assert.assertEquals(true, result);
-        } catch (ValidationExceptions e) {
-            e.printStackTrace();
+        } catch ( ValidationExceptions e) {
+            System.out.println(e.getMessage());
         }
     }
     @Test
@@ -29,7 +30,7 @@ public class RegistrationTest {
             boolean result = registration.getLastName("Gavhad");
             Assert.assertEquals(true, result);
         } catch (ValidationExceptions e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
     @Test
@@ -37,8 +38,8 @@ public class RegistrationTest {
         try {
             boolean result = registration.getPhoneNumber("91 7584684205");
             Assert.assertEquals(true, result);
-        } catch (ValidationExceptions e) {
-            e.printStackTrace();
+        } catch ( ValidationExceptions e) {
+            System.out.println(e.getMessage());
         }
     }
     @Test
@@ -46,8 +47,8 @@ public class RegistrationTest {
         try {
             boolean result = registration.getPassword("ABcd$12ijk");
             Assert.assertEquals(true, result);
-        } catch (ValidationExceptions e) {
-            e.printStackTrace();
+        } catch ( ValidationExceptions e) {
+            System.out.println(e.getMessage());
         }
     }
     @Test
@@ -55,8 +56,8 @@ public class RegistrationTest {
         try {
             boolean result = registration.getEmail("ganesh.gavhad@co.in");
             Assert.assertEquals(true, result);
-        } catch (ValidationExceptions e) {
-            e.printStackTrace();
+        }catch ( ValidationExceptions e) {
+            System.out.println(e.getMessage());
         }
     }
     // false
@@ -64,9 +65,9 @@ public class RegistrationTest {
     public void givenFirstName_WhenProper_ShouldReturnFalse() throws ValidationExceptions {
         try {
             boolean result = registration.getFirstName("ganesh");
-            Assert.assertFalse(result);
-        } catch (ValidationExceptions e) {
-            e.printStackTrace();
+            Assert.assertEquals(false,result);
+        } catch ( ValidationExceptions e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -75,8 +76,8 @@ public class RegistrationTest {
         try {
             boolean result = registration.getLastName("gavhad");
             Assert.assertFalse(result);
-        } catch (ValidationExceptions e) {
-            e.printStackTrace();
+        } catch ( ValidationExceptions e) {
+            System.out.println(e.getMessage());
         }
     }
     @Test
@@ -84,8 +85,8 @@ public class RegistrationTest {
         try {
             boolean result = registration.getPhoneNumber("85425");
             Assert.assertEquals(false, result);
-        } catch (ValidationExceptions e) {
-            e.printStackTrace();
+        }catch ( ValidationExceptions e) {
+            System.out.println(e.getMessage());
         }
     }
     @Test
@@ -93,8 +94,8 @@ public class RegistrationTest {
         try {
             boolean result = registration.getPassword("123");
             Assert.assertEquals(false, result);
-        } catch (ValidationExceptions e) {
-            e.printStackTrace();
+        } catch ( ValidationExceptions e) {
+            System.out.println(e.getMessage());
         }
     }
     @Test
@@ -102,8 +103,8 @@ public class RegistrationTest {
         try {
             boolean result = registration.getEmail("ganesh.gavhad.com");
             Assert.assertEquals(false, result);
-        } catch (ValidationExceptions e) {
-            e.printStackTrace();
+        } catch ( ValidationExceptions e) {
+            System.out.println(e.getMessage());
         }
     }
 }

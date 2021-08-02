@@ -1,12 +1,12 @@
 package com.bridgelabz;
 
-/************************************************************
+/********************************************************************
  * Purpose : Create a user registration system using regex.And Custom
  * Exception handling with test case
  * @author Ganesh Gavhad
  * @Version 1.0
  * @since 28-07-2021
- *********************************************************/
+ *******************************************************************/
 import java.util.regex.Pattern;
 
 public class Registration {
@@ -14,29 +14,24 @@ public class Registration {
     /**
      * Contains regex pattern to test Firstname
      * @param firstName
-     * @return True if matches regex pattern orterwise false
      */
-    public  boolean getFirstName(String firstName) throws ValidationExceptions {
-        boolean check;
-        check = Pattern.matches("[A-Z]+[a-z]{2,}", firstName);
-        if (check) {
-            return true;
-        } else {
-            throw new ValidationExceptions("Invalid First Name");
+    public boolean getFirstName(String firstName) throws ValidationExceptions {
+        try {
+            return Pattern.matches("[A-Z]+[a-z]{2,}", firstName);
+        }catch (Exception e){
+            throw new ValidationExceptions("invalid First Name");
         }
     }
+
     /**
      * Contains regex pattern to test Last name
      * @param lastName
      * @return True if matches regex pattern orterwise false
      */
     public boolean getLastName(String lastName) throws ValidationExceptions {
-        boolean check;
-        check= Pattern.matches("[A-Z]+[a-z]{2,}", lastName);
-        if(check) {
-            return true;
-        }
-        else{
+        try {
+            return Pattern.matches("[A-Z]+[a-z]{2,}", lastName);
+        } catch (Exception e) {
             throw new ValidationExceptions("Invalid Last Name");
         }
     }
@@ -47,14 +42,13 @@ public class Registration {
      * @return True if matches regex pattern otherwise return invalid
      */
     public boolean getPhoneNumber(String phone) throws ValidationExceptions {
-        boolean check;
-        check = Pattern.matches("^(\\d{2}[ ]){1}\\d{10}$",phone);
-        if(check) {
-            return true;
-        }else {
-            throw new ValidationExceptions("Invalid phone number");
+        try {
+            return Pattern.matches("^(\\d{2}[ ]){1}\\d{10}$", phone);
+
+            } catch (Exception e){
+                throw new ValidationExceptions("Invalid phone number");
+            }
         }
-    }
 
     /**
      * Contains regex pattern to test email id.
@@ -62,11 +56,9 @@ public class Registration {
      * @return True if matches regex pattern otherwise false
      */
     public boolean getEmail(String email) throws ValidationExceptions {
-        boolean check;
-        check = Pattern.matches("^[a-z0-9.+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,6}$", email);
-        if(check) {
-            return true;
-        }else {
+        try {
+            return Pattern.matches("^[a-z0-9.+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,6}$", email);
+        }catch (Exception e){
             throw new ValidationExceptions("Invalid email");
         }
     }
@@ -77,11 +69,9 @@ public class Registration {
      * @return True if matches regex pattern orterwise false
      */
     public boolean getPassword(String password) throws ValidationExceptions {
-        boolean check;
-        check = Pattern.matches("^(?=.*[A-Z])(?=.*\\d)(?=.*[a-zA-z0-9!@#$%^&*()_+=-{};':<>,./?~`]).{8,}$", password);
-        if(check) {
-            return true;
-        }else{
+       try {
+           return Pattern.matches("^(?=.*[A-Z])(?=.*\\d)(?=.*[a-zA-z0-9!@#$%^&*()_+=-{};':<>,./?~`]).{8,}$", password);
+       } catch (Exception e){
             throw new ValidationExceptions("Invalid password");
         }
     }

@@ -24,8 +24,9 @@ public class EmailParameterisedTest {
     }
     @Parameterized.Parameters
     public static Collection parameters(){
-        return Arrays.asList(new Object[][]{{"ganesh.gavhad@co.in","true"},{"abc-100@yahoo.com","true"},{"abc-100@yahoo.com","true"},{"abc111@abc.com","true"},{"abc-100@abc.net","true"},{"abc.100@abc.com.au","true"},{"abc@1.com","true"},
-                {"abc@gmail.com","true"},{"abc+100@gmail.com","true"}});
+        return Arrays.asList(new Object[][]{{"ganesh.gavhad@co.in","true"},{"abc-100@yahoo.com","true"},
+                {"abc-100@yahoo.com","true"}, {"abc111@abc.com","true"},{"abc-100@abc.net","true"},
+                {"abc.100@abc.com.au","true"},{"abc@1.com","true"}, {"abc@gmail.com","true"},{"abc+100@gmail.com","true"}});
     }
     @Test
     public void givenEmail_ShouldReturn_TrueAndFalse() throws ValidationExceptions {
