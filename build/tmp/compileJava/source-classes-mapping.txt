@@ -4,3 +4,6 @@ com/bridgelabz/UserDetails.java
  com.bridgelabz.UserDetails
 com/bridgelabz/Registration.java
  com.bridgelabz.Registration
+com/bridgelabz/UserRegistrationMain.java
+ com.bridgelabz.UserRegistrationMain
+ com.bridgelabz.validationProcess
